@@ -1,0 +1,82 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1%;
+}
+.photo {
+  flex-basis: 18%;
+  width: 18%;
+  margin: 1%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.photoHolder {
+  background-color: #efefef;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.photo img {
+  max-width: 100%;
+  width: auto;
+  max-height: 150px;
+  margin: 0;
+}
+.photoName span {
+  max-width: 200px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.selectedPhoto {
+  position: relative;
+}
+.selectedPhoto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.selectedPhoto::after {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  content: '\2713';
+  font-weight: bold;
+  background-color: white;
+  width: 15px;
+  height: 15px;
+}
+
+@media (max-width: 991px) {
+  .photo {
+    flex-basis: 23%;
+    width: 23%;
+  }
+}
+@media (max-width: 767px) {
+  .photo {
+    flex-basis: 31.33%;
+    width: 31.33%;
+  }
+}
+@media (max-width: 575px) {
+  .photo {
+    flex-basis: 48%;
+    width: 48%;
+  }
+}
+@media (max-width: 375px) {
+  .photo {
+    flex-basis: 98%;
+    width: 98%;
+  }
+}

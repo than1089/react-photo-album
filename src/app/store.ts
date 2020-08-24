@@ -1,9 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import photosReducer from '../features/photos/photosSlide';
+import uploadReducer from '../features/photos/uploadSlide';
+import healthReducer from '../features/healthcheck/healcheckSlide';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    photos: photosReducer,
+    upload: uploadReducer,
+    health: healthReducer
   },
 });
 
