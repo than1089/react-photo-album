@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+I used `configStore`, `createSlide` to reduce the Redux boilerplate.
+
+`createSlide` automatically generates action creators and action types that correspond to the reducers and state. And also safely `mutate` the state, which is magically handled by `createReducer`
+(https://redux-toolkit.js.org/api/createReducer#direct-state-mutation)
+
 ## Available Scripts
 
 In the project directory, you can run:
