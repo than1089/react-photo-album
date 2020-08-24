@@ -39,7 +39,7 @@ export function Photos() {
           </div>  
         )}
       </div>
-      {!photos.isLastPage &&
+      {!photos.isLastPage && !photos.isLoading &&
         <div className="load-more text-center">
           <button className="load-more-btn" onClick={loadMore}>Load More</button>
         </div>
