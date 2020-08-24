@@ -2,7 +2,7 @@ import axios from 'axios';
 import { setUploadPercentage } from '../features/photos/uploadSlide';
 import { Dispatch } from 'react';
 
-const backendURL = 'http://localhost:8888';
+const backendURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8888';
 
 export interface Photo {
   id: string;
